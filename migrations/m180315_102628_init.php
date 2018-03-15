@@ -1,6 +1,6 @@
 <?php
 
-use app\migrations\BaseMigration;
+namespace app\migrations;
 
 class m180315_102628_init extends BaseMigration
 {
@@ -20,8 +20,6 @@ class m180315_102628_init extends BaseMigration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $this->tableOptions());
-
-        $this->addPrimaryKey('namanya ini mah gak ngaruh', '{{%table}}', columns);
     }
 
     public function down()
